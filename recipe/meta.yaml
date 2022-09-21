@@ -1,5 +1,5 @@
 {% set name = "pado" %}
-{% set version = "0.10.1" %}
+{% set version = "0.11.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8de35956eae239f798aa4fd773cdc50520b6977fff0fd42a4740a6da149e1502
+  sha256: 5dd4509b8aef4fd8694e03739f298d92f64d3968175e9118769c4ff83832fe1b
 
 build:
   noarch: python
