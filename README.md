@@ -1,11 +1,11 @@
-About pado
-==========
+About pado-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pado-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/bayer-group/pado
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pado-feedstock/blob/main/LICENSE.txt)
 
 Summary: cloud-native dataset library for accessing histopathological datasets
 
