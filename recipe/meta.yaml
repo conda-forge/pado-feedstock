@@ -7,12 +7,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2b2ec9d32ca89684ebb0670934a533314c89b607ca1a1de830b330f872338d43
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - pado = pado.__main__:cli
@@ -21,7 +21,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - dynaconf
@@ -35,7 +35,7 @@ requirements:
     - platformdirs
     - pyarrow
     - pydantic
-    - python >=3.7
+    - python >={{ python_min }}
     - rich >=12
     - shapely
     - tifffile >=2021.6.6
@@ -57,6 +57,7 @@ test:
     - pado-transporter --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/bayer-group/pado
